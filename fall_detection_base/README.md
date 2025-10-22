@@ -45,7 +45,7 @@ Ubuntu 20.04 이상 운영체제 또는 동일 시기(약 2020년) 이후에 나
     `{UR_FALL_DETECTION_DATA_DIR}`는 1번에서 수정한 경로(mp4가 직접 담긴 디렉토리 경로) 기입
 
 
-## Active learning
+### Active learning
 - **인터페이스**: 학습 대상 모델은 `fall_detection_base/custom_models/custom_models.py`에 있는 `FallDetector`를 사용하며 다음의 인터페이스를 가짐
     - 입력: 비디오 1개에서 추출한 keypoint
     - 출력: 0~1 사이 확률값 (0.5 이상이면 낙상, 아니면 정상, 비디오 당 1개 float 값 출력)
@@ -65,7 +65,7 @@ Ubuntu 20.04 이상 운영체제 또는 동일 시기(약 2020년) 이후에 나
 
 주의: `fall_detection_base/falldetection_openpifpaf` 는 건들지 말것
 
-## Metric 계산
+### Metric 계산
 1. Active learning 수행하고 모델 튜닝. 체크포인트는 `fall_detection_base/fall_detector.pt`와 `fall_detection_base/falldetection_openpifpaf_custom/fall_detector.pt` 에 저장
 2. `cd fall_detection_base`
 3. `cp -r ./falldetection_openpifpaf_custom/* ~/miniconda3/envs/{ENV_NAME}/lib/python3.7/site-packages/openpifpaf/` 실행
@@ -97,7 +97,7 @@ Ubuntu 20.04 이상 운영체제 또는 동일 시기(약 2020년) 이후에 나
     python run.py --video_input {VIDEO_PATH} --output_dir output/UR_fall_detection
     ```
 
-## 학습
+### 학습
 -  `train_model.py` 참고. 모델은 `custom_models/custom_models.py`에 있는 `FallDetector`를 사용하며 다음의 인터페이스를 가짐
     - 입력: 비디오 1개에서 추출한 keypoint
     - 출력: 0~1 사이 확률값 (0.5 이상이면 낙상, 아니면 정상, 비디오 당 1개 float 값 출력)
