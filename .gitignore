@@ -1,0 +1,8 @@
+easy_ViTPose/
+VideoCLIP-XL/
+falldetection_openpifpaf_git/
+fall_detection_base/output/*
+fall_detection_base/falldetection_openpifpaf_custom/output/
+**/*.mp4
+**/*_bk
+**/*.bk

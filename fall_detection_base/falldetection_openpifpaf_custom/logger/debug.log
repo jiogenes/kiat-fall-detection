@@ -1,0 +1,2 @@
+2025-09-15 14:06:51,739 [INFO]: MainProcess video.py(cli:111) >> neural network device: cuda
+2025-09-15 14:06:51,740 [INFO]: MainProcess multistreamloader.py(generateStreams:33) >> Initialising stream: /data/kiat/fall_detection_dataset/test/786/video.mp4
